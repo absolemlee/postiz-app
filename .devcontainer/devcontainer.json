@@ -1,6 +1,9 @@
 {
 	"name": "Postiz Dev Container",
-	"image": "localhost/postiz-devcontainer",
+	"build": {
+		"dockerfile": "../Dockerfile",
+		"context": ".."
+	},
 	"features": {},
 	"customizations": {
 		"vscode": {
@@ -11,4 +14,3 @@
 	"forwardPorts": ["4200:4200", "3000:3000"],
 	"mounts": ["source=/apps,destination=/apps/dist/,type=bind,consistency=cached"]
 }
-
